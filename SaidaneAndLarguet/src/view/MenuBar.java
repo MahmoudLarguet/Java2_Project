@@ -1,0 +1,38 @@
+package view;
+import javax.swing.*;
+import java.awt.*;
+public class MenuBar extends JMenuBar {
+	
+	
+	public MenuBar() {
+		JMenu gestionMenu = new JMenu("Gestion");
+		JMenuItem gestionProfileItem = new JMenuItem("gestion profils");
+		JMenuItem gestionEmployerItem = new JMenuItem("gestion employes");
+		JMenuItem gestion_Emp_ProfileItem = new JMenuItem("Employes/Profil");
+		JMenuItem QuitItem = new JMenuItem("Quiter");
+		gestionMenu.add(gestionProfileItem);
+		gestionMenu.add(gestionEmployerItem);
+		gestionMenu.add(gestion_Emp_ProfileItem);
+		gestionMenu.add(QuitItem);
+		
+		
+		JMenu rechercherMenu = new JMenu("Rechercher");
+		JMenuItem cinItem = new JMenuItem("Cin Employes");
+		JMenuItem nomItem = new JMenuItem("Nom Employes");
+		rechercherMenu.add(cinItem);
+		rechercherMenu.add(nomItem);
+		
+		
+		JMenu colorMenu = new JMenu("Theme");
+		JMenuItem blueItem = new JMenuItem("Dark");
+		JMenuItem redItem = new JMenuItem("Light");
+		colorMenu.add(blueItem);
+		colorMenu.add(redItem);
+		
+		
+		add(gestionMenu);
+		add(rechercherMenu);
+		add(colorMenu);
+		
+	}
+}

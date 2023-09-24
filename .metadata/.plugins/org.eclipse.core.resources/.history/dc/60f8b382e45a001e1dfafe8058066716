@@ -1,0 +1,22 @@
+package view;
+import java.awt.BorderLayout;
+
+import javax.swing.*;
+
+public class ProfileManagement extends JPanel {
+	private JPanel searchPane;
+	private JTextField searchField;
+	private JButton searchButton, cancelSearchButton;
+	public ProfileManagement() {
+		setLayout(new BorderLayout());
+		searchPane = new JPanel();
+		searchField = new JTextField();
+		searchButton = new JButton("Search");
+		cancelSearchButton = new JButton("Cancel Search");
+		searchPane.add(searchField);
+		searchPane.add(searchButton);
+		searchPane.add(cancelSearchButton);
+		add(searchPane,"North");
+		
+	}
+}

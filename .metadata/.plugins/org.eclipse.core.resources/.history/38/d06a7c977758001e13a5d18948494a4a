@@ -1,0 +1,29 @@
+package view;
+import javax.swing.*;
+import java.awt.*;
+
+
+public class MainFrame extends JFrame {
+	JFrame pane;
+	JMenuBar menuBar ;
+	public MainFrame() {
+		super("Gestion Des Employes");
+		pane = new JFrame();
+		Font f = new Font("Serif",Font.BOLD,25);
+		setFont(f);
+		setSize(1600,1400);
+		add(pane);
+		menuBar = new JMenuBar();
+		pane.setJMenuBar(menuBar);
+		JMenu fileMenu = new JMenu("File");
+		JMenu editMenu = new JMenu("Edit");
+
+		menuBar.add(fileMenu);
+		menuBar.add(editMenu);
+	}
+	public static void main(String[] args) {
+		JFrame myFrame = new MainFrame();
+		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		myFrame.setVisible(true);
+	}
+}

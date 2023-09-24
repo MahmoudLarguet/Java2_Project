@@ -1,0 +1,45 @@
+package view;
+import java.awt.BorderLayout;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+import java.awt.GridBagConstraints;
+import javax.swing.*;
+
+public class ProfileManagement extends JPanel {
+	private JPanel searchPane;
+	private JTextField searchField;
+	private JButton searchButton, cancelSearchButton;
+	public ProfileManagement() {
+		setLayout(new BorderLayout());
+		searchPane = new JPanel();
+		searchPane.setLayout(new GridBagLayout());
+		GridBagConstraints rule = new GridBagConstraints();
+		rule.insets = new Insets(10,10,10,10); 
+		searchField = new JTextField(30);
+		searchButton = new JButton("Search");
+		cancelSearchButton = new JButton("Clear");
+		
+		// Adding the search Bar
+		rule.gridx = 0;
+		rule.gridy = 0;
+		rule.gridwidth = 2;
+		rule.fill = GridBagConstraints.HORIZONTAL;
+		searchPane.add(searchField,rule);
+		
+		//Adding the search Button
+		rule.gridx = 0;
+		rule.gridy = 1;
+		rule.gridwidth = 1;
+		rule.fill = GridBagConstraints.NONE;
+		searchPane.add(searchButton,rule);
+		
+		//Adding the clear Button
+		rule.gridx = 1;
+		rule.gridy = 1;
+		searchPane.add(cancelSearchButton,rule);
+		
+		//Adding The Search  Pane 
+		add(searchPane,"North");
+		
+	}
+}

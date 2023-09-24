@@ -1,0 +1,19 @@
+package view;
+import javax.swing.JFrame;
+import java.awt.Font;
+
+
+public class MainFrame extends JFrame {
+	public MainFrame() {
+		super("Gestion Des Employes");
+		Font f = new Font("Serif",Font.BOLD,25);
+		setFont(f);
+		setSize(1600,1400);
+		
+	}
+	public static void main(String[] args) {
+		JFrame myFrame = new MainFrame();
+		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		myFrame.setVisible(true);
+	}
+}

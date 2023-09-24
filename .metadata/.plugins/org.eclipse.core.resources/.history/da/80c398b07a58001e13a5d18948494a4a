@@ -1,0 +1,48 @@
+package view;
+import javax.swing.*;
+import java.awt.*;
+
+
+public class MainFrame extends JFrame {
+	JPanel pane,welcome,gestionProfile,GestionEmploye,List;
+	JMenuBar menuBar ;
+	JTabbedPane onglets;
+	public MainFrame() {
+		super("Gestion Des Employes");
+		pane = new JPanel();
+		Font f = new Font("Serif",Font.BOLD,25);
+		setFont(f);
+		setSize(1600,1400);
+		add(pane);
+		menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+		JMenu gestionMenu = new JMenu("Gestion");
+		JMenu colMenu = new JMenu("Couleurs");
+		JMenu rechercherMenu = new JMenu("Rechercher");
+		JMenuItem gestionGProfile = new JMenuItem("gestion profils");
+		JMenuItem gestionGEmploy = new JMenuItem("gestion employes");
+		JMenuItem gestGEmpProf = new JMenuItem("Employes/profil");
+		JMenuItem gestQuit = new JMenuItem("Quitter");
+		gestionMenu.add(gestionGProfile);
+		gestionMenu.add(gestionGEmploy);
+		gestionMenu.add(gestGEmpProf);
+		gestionMenu.add(gestQuit);
+		
+		menuBar.add(gestionMenu);
+		menuBar.add(colMenu);
+		menuBar.add(rechercherMenu);
+		onglets = new JTabbedPane(JTabbedPane.TOP);
+		welcome = new JPanel();
+		gestionProfile = new JPanel();
+		onglets.add("Welcome",welcome);
+		onglets.add("Gestion Profile",gestionProfile);
+		add(onglets);
+		
+		
+	}
+	public static void main(String[] args) {
+		JFrame myFrame = new MainFrame();
+		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		myFrame.setVisible(true);
+	}
+}

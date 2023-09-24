@@ -1,0 +1,13 @@
+package view;
+import javax.swing.*;
+import java.awt.*;
+public class TabMenu extends JTabbedPane {
+	private JPanel welcome, gestionProfile;
+	public TabMenu() {
+		super(JTabbedPane.TOP);
+		welcome = new JPanel();
+		gestionProfile = new JPanel();
+		add("Welcome",welcome);
+		add("Gestion Profile",gestionProfile);
+	}
+}
