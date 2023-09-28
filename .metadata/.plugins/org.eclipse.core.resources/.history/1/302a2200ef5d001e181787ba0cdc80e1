@@ -1,0 +1,13 @@
+package view;
+import javax.swing.*;
+import java.awt.*;
+public class Welcome extends JPanel {
+	public Welcome() {
+		setBackground(Color.gray);
+		ImageIcon pic = new ImageIcon("image/welcome.jpg");
+		add(new JLabel(pic));
+		
+	}
+
+	
+}

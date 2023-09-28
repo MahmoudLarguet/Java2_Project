@@ -1,0 +1,23 @@
+package view;
+import java.awt.Color;
+import java.awt.Component;
+
+import javax.swing.*;
+public class PHManagement extends JSplitPane {
+	private static ProfileManagement profilePane ;
+	private static HolidayTypeManagement holidayPane;
+	public PHManagement() {
+		super(JSplitPane.HORIZONTAL_SPLIT);
+		profilePane = new ProfileManagement();
+		holidayPane = new HolidayTypeManagement();
+		JPanel separatorPanel = new JPanel();
+        separatorPanel.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.BLACK));
+		setDividerLocation(700);
+		setDividerSize(0);
+		setLeftComponent(profilePane);
+		setRightComponent(holidayPane);
+		profilePane.add(separatorPanel);
+      
+
+	}
+}

@@ -1,0 +1,80 @@
+package view;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Test {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Search Interface Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 200);
+
+        // Create a main panel with a BorderLayout
+        JPanel mainPanel = new JPanel(new BorderLayout());
+
+        // Create a title label centered at the top
+        JLabel titleLabel = new JLabel("Centered Title", SwingConstants.CENTER);
+        titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
+
+        // Create a panel for the left section
+        JPanel leftPanel = new JPanel();
+        leftPanel.setLayout(new BoxLayout(leftPanel, BoxLayout.Y_AXIS)); // Vertically stacked components
+
+        // Add "Search by:" label
+        JLabel searchLabel = new JLabel("Search by:");
+        leftPanel.add(searchLabel);
+
+        // Create and add a combobox
+        String[] options = {"Option 1", "Option 2", "Option 3"};
+        JComboBox<String> comboBox = new JComboBox<>(options);
+        leftPanel.add(comboBox);
+
+        // Create a panel for the right section
+        JPanel rightPanel = new JPanel(new BorderLayout());
+
+        // Create a centered search bar
+        JTextField searchBar = new JTextField();
+        rightPanel.add(searchBar, BorderLayout.CENTER);
+
+        // Create a panel for search and cancel buttons
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS));
+
+        // Create the "Search" button
+        JButton searchButton = new JButton("Search");
+        searchButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        buttonPanel.add(searchButton);
+
+        // Create the "Cancel Search" button
+        JButton cancelSearchButton = new JButton("Cancel Search");
+        cancelSearchButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        buttonPanel.add(cancelSearchButton);
+
+        // Add the title, left, and right sections to the main panel
+        mainPanel.add(titleLabel, BorderLayout.NORTH);
+        mainPanel.add(leftPanel, BorderLayout.WEST);
+        mainPanel.add(rightPanel, BorderLayout.CENTER);
+
+        // Add the button panel to the right section
+        rightPanel.add(buttonPanel, BorderLayout.EAST);
+
+        // Add action listeners for the buttons (you can implement the actions as needed)
+        searchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Handle search button action
+            }
+        });
+
+        cancelSearchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Handle cancel search button action
+            }
+        });
+
+        frame.add(mainPanel);
+        frame.setVisible(true);
+    }
+}

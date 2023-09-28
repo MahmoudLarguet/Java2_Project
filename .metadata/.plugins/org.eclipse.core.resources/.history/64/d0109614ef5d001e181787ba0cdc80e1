@@ -1,0 +1,17 @@
+package view;
+import javax.swing.*;
+import java.awt.*;
+public class Welcome extends JPanel {
+	private JLabel image;
+	public Welcome() {
+		setBackground(Color.gray);
+		ImageIcon pic = new ImageIcon("image/welcome.jpg");
+		image = new JLabel(pic);
+		image.setHorizontalAlignment(JLabel.CENTER);
+	    image.setVerticalAlignment(JLabel.CENTER);
+		add(new JLabel(pic));
+		
+	}
+
+	
+}

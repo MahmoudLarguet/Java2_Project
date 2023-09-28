@@ -2,17 +2,19 @@ package view;
 import javax.swing.*;
 import java.awt.*;
 public class TabMenu extends JTabbedPane {
-	private JPanel welcome,employeManagement,holidayManagement;
+	private JPanel welcome,employeManagement,holidayManagement,holidayCalendar;
 	private JSplitPane phManagement;
 	public TabMenu() {
 		super(JTabbedPane.TOP);
-		welcome = new JPanel();
+		welcome = new Welcome();
 		phManagement = new PHManagement();
-		employeManagement = new JPanel();
-		holidayManagement = new JPanel();
-		add("Welcome",welcome);
+		employeManagement = new EmployeesManagement();
+		holidayManagement = new HolidayManagement();
+		holidayCalendar = new HolidayCalendar();
+		add("Welcome",welcome);      
 		add("Profiles/Holidays Management",phManagement);
 		add("Employees Management",employeManagement);
 		add("Holiday Management",holidayManagement);
+		add("Holiday Calendar",holidayCalendar);
 	}
 }

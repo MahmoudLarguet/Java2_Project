@@ -1,0 +1,15 @@
+package view;
+import javax.swing.*;
+import java.awt.*;
+public class Welcome extends JPanel {
+	public Welcome() {
+		setBackground(Color.green);
+
+	 
+	      
+	
+		
+	}
+
+	
+}

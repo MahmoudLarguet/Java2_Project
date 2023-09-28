@@ -1,0 +1,44 @@
+package view;
+import javax.swing.*;
+import java.awt.*;
+public class MenuBar extends JMenuBar {
+	
+	
+	public MenuBar() {
+		JMenu gestionMenu = new JMenu("Add");
+		JMenuItem gestionProfileItem = new JMenuItem("Add Employee");
+		JMenuItem gestionEmployerItem = new JMenuItem("Add Holiday");
+		JMenuItem gestion_Emp_ProfileItem = new JMenuItem("Add Profile");
+		JMenuItem QuitItem = new JMenuItem("Quit");
+		gestionMenu.add(gestionProfileItem);
+		gestionMenu.add(gestionEmployerItem);
+		gestionMenu.add(gestion_Emp_ProfileItem);
+		gestionMenu.add(QuitItem);
+		gestionMenu.add(new JSeparator()); 
+		
+		
+		JMenu rechercherMenu = new JMenu("Quick Search");
+		rechercherMenu.add(new JSeparator()); 
+		JMenuItem cinItem = new JMenuItem("Employee By Name");
+		rechercherMenu.add(new JSeparator()); 
+		JMenuItem nomItem = new JMenuItem("Employee By Id");
+		rechercherMenu.add(new JSeparator()); 
+		rechercherMenu.add(cinItem);
+		
+		
+		
+		
+		JMenu colorMenu = new JMenu("Theme");
+		JMenuItem blueItem = new JMenuItem("Dark");
+		JMenuItem redItem = new JMenuItem("Light");
+		colorMenu.add(blueItem);
+		colorMenu.add(redItem);
+		colorMenu.add(new JSeparator()); 
+		
+		
+		add(gestionMenu);
+		add(rechercherMenu);
+		add(colorMenu);
+		
+	}
+}

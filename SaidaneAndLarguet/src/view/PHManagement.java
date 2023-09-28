@@ -4,12 +4,17 @@ import java.awt.Component;
 
 import javax.swing.*;
 public class PHManagement extends JSplitPane {
-	private static ProfileManagement profilePane =  new ProfileManagement();
-	private static HolidayTypeManagement holidayPane = new HolidayTypeManagement();
+	private static ProfileManagement profilePane ;
+	private static HolidayTypeManagement holidayPane;
 	public PHManagement() {
-		super(JSplitPane.HORIZONTAL_SPLIT,profilePane,holidayPane);
-		setDividerLocation(700);
+		super(JSplitPane.HORIZONTAL_SPLIT);
+		profilePane = new ProfileManagement();
+		holidayPane = new HolidayTypeManagement();
+		setDividerLocation(600);
+		setLeftComponent(profilePane);
+		setRightComponent(holidayPane);
 		
-		
+      
+
 	}
 }
